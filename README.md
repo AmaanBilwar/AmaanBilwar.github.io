@@ -172,7 +172,4 @@ getJoke();`
 
 Additionally, as per the requirement, I have set cookies to remember the user, So, for the first time a pop up will be displayed saying Welcome to my Home page, and for the next visit it displays a pop up saying Welcome back and the date and time when the user have visited last. 
 
-![First Time user](assets/img/Screenshot-4.png)
-![Next time Visitor](assets/img/Screenshot-5.png)
-
-Along with the report, I have attached the Source Code and the website as pdf. 
+![First Time user and Saved Cookies](assets/img/Screenshot-4.png)
