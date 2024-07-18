@@ -27,9 +27,7 @@ For this Project, I have created a public repository that can be accessed throug
 
 # General Requirements
 
-Firstly, I have created a public repository with the name amaanbilwar.github.io. Then I have created a html file with name `waph.html`. This file includes the course information and the overviews of Completed Labs, Hackathons and Individual Projects. This website can be accessed through [https://amaanbilwar.github.io/waph.html](https://amaanbilwar.github.io/waph.html)
-
-I have cloned this public repository to my virtual box by generating personal access token in github.
+Made a public repository with the name amaanbilwar.github.io. Then I have created a html file with name `waph.html`. This file includes the course information and the overview of all the completed Labs, Hackathons and Individual Projects. This website can be accessed through [https://amaanbilwar.github.io/waph.html](https://amaanbilwar.github.io/waph.html)
 
 ![Screenshot of `waph.html`](assets/img/Screenshot-1.png)
 
