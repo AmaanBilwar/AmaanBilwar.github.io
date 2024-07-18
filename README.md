@@ -6,7 +6,7 @@
 
 **Email**: bilwarad@mail.uc.edu
 
-**Short-bio**: I am interested in Software Development and Cyber Security. 
+**Short-bio**: 
 
 ![Bhanu Sree's headshot](assets/img/headshot.jpeg)
 
