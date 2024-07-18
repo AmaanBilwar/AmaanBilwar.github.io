@@ -12,28 +12,28 @@
 
 ## Repository Information
 
-Respository's URL: [https://github.com/anjuribe/anjuribe.github.io](https://github.com/anjuribe/anjuribe.github.io)
+Respository's URL: [https://github.com/amaan/amaanbilwar.github.io](https://github.com/amaanbilwar/amaanbilwar.github.io)
 
-This is a private repository for Bhanu Sree Anjuri to store all code from the
+This is a private repository for Amaan Bilwar to store all code from the
 course. The organization of this repository is as follows.
 
 # Individual Project 1
 ## Front-end Web Development with a Professional Profile Website on github.io cloud service
 
 ## Overview 
-In this project, we will expand front-end web development skills by developing a Professional Profile Website and deploying it on `github.io` cloud service. This project has general, non-technical, and technical requirements that includes additional tasks like flag counter, API integration and setting cookies. 
+In this project, we build a front-end web app which is a Professional Portfolio Website and deploying it on `github.io`/github pages for free hosting on the Github cloud service. This project has general, non-technical, and technical requirements that includes additional tasks like flag counter, API integration and setting cookies. 
 
-For this Project, I have created a public repository that can be accessed through [https://github.com/anjuribe/anjuribe.github.io](https://github.com/anjuribe/anjuribe.github.io)
+For this Project, I have created a public repository that can be accessed through [https://github.com/amaanbilwar/amaan.github.io](https://github.com/amaanbilwar/amaanbilwar.github.io)
 
 # General Requirements
 
-Firstly, I have created a public repository with the name anjuribe.github.io. Then I have created a html file with name `waph.html`. This file includes the course information and the overviews of Completed Labs, Hackathons and Individual Projects. This website can be accessed through [https://anjuribe.github.io/waph.html](https://anjuribe.github.io/waph.html)
+Firstly, I have created a public repository with the name amaanbilwar.github.io. Then I have created a html file with name `waph.html`. This file includes the course information and the overviews of Completed Labs, Hackathons and Individual Projects. This website can be accessed through [https://amaanbilwar.github.io/waph.html](https://amaanbilwar.github.io/waph.html)
 
 I have cloned this public repository to my virtual box by generating personal access token in github.
 
 ![Screenshot of `waph.html`](assets/img/Screenshot-1.png)
 
-After cloning,n I have created a html file `idex.html` for my personal website on Github cloud as a professional profile to add to my resume. This website can be accessed through [https://anjuribe.github.io/](https://anjuribe.github.io/)
+After cloning,n I have created a html file `idex.html` for my personal website on Github cloud as a professional profile to add to my resume. This website can be accessed through [https://amaanbilwar.github.io/](https://amaanbilwar.github.io/)
 
 My professional website includes the following sections:
 1. About
@@ -53,7 +53,7 @@ The following is the code for this section of the page:
 
 ```<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">```
         `<a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Bhanu Sree Anjuri</span>
+            <span class="d-block d-lg-none">Amaan Bilwar</span>
             <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
                     src="./assets/img/profile.jpg" alt="..." /></span>
         </a>`
@@ -72,13 +72,12 @@ The following is the code for this section of the page:
         </div>
 `</nav>`
 
-Which you can find this in the above screenshot also.
 
-Next part of the website is followed by creating sections for each section and mapping it to the navigation bar. 
+You can use the navigation bar to quickly and swiftly navigate around the web page
 
-At last this webpage icncludes all the additional tasks required for this project. 
+At the end the website contains all the additional tasks required for this project. 
 
-Apart from the General Requirements, I have linked the `waph.html` file in the main page using `<a>` tag. 
+Apart from the General Requirements, the `waph.html` file has been linked in the main page using `<a>` tag. 
 
 # Non-Technical Requirements
 Next, for the Non-technical Requirements:
@@ -90,8 +89,8 @@ Next, for the Non-technical Requirements:
 
 Coming to the Technical Requirements:
 
-1. I have used the jQuery and Java Script code introduced in Lab 2 for displaying Digital Clock, Analog Clock, Show/Hide My Email. 
-2.  For Another Functonality of my Choice, I have used an open source js framework Vue for an additional functionality. I have integrated a public API for fetching a random Quote for every 12 hours and gets a new quote whenever the page is loaded. 
+1. The jQuery and Java Script code was introduced in Lab 2 for displaying Digital Clock, Analog Clock, Show/Hide My Email. 
+2. Used Vue and integrated a public API for fetching a random quote.
 
 The Code for this functionality is in the script tag:
 
