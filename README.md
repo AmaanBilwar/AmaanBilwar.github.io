@@ -8,7 +8,7 @@
 
 **Short-bio**: 
 
-![Bhanu Sree's headshot](assets/img/headshot.jpeg)
+![Amaan Bilwar's headshot](./assets/img/profile.jpg)
 
 ## Repository Information
 
