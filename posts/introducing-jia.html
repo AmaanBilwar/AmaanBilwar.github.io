@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducing Jia — the Search Engine for Everything - Amaan</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../project.html">Projects</a>
+      </nav>
+      <article>
+        <h1>Introducing Jia — the Search Engine for Everything</h1>
+        <time>2025-12-23</time>
+
+        <h2>What is Jia?</h2>
+        <p>Imagine this: you upload something to Google Drive, and think to yourself <em>"thank God for cloud storage, I can view this from anywhere I need"</em>. A few days later, you need that file again but cannot remember the name for the life of you. Now what? Sort by date? Probably. You're stressed and miss it even after a few scrolls up and down the page.</p>
+        <p>Silly enough, you find that file a couple of days later and in shock you say "<em>Of course I named it that ughh</em>"</p>
+
+        <h2>How does Jia help?</h2>
+        <p>We don't just store and host your files for you, we <strong>understand</strong> what your file is about, despite the format. If it's a video:</p>
+        <ul>
+          <li>who's in the video</li>
+          <li>where is it taking place</li>
+          <li>what are the objects in the video</li>
+          <li>the vibes.</li>
+        </ul>
+        <p>Similarly, if it's a PDF, we extract the content to process it. On top of this, you can attach your own tags to the file you're uploading. Like "homework", "college", "trip to hawaii" etc.</p>
+        <p>In this way, if you remember anything in or about the file, we can find it for you.</p>
+
+        <h2>Why Jia</h2>
+        <p>Google Drive is ass, don't even get me started on the search functionality.</p>
+
+        <h2>How do I do this?</h2>
+        <p>Currently, the functionality is limited to videos, which might seem crazy because videos are the most difficult file type to index — they're dynamic and multimodal. Images, PDFs, and word docs should be way easier to preprocess.</p>
+        <p>With the preprocessing pipeline, videos are first chunked into smaller 30-second pieces. Then multiple threads are spawned for a multi-process "INDEXING" pipeline:</p>
+        <ol>
+          <li><strong>Transcription pipeline</strong> — extracts audio from the chunk, passes that to an LLM for transcription, and writes to JSON the transcript. Word-level transcription for precise video editing control.</li>
+          <li><strong>Scene / environment detection</strong> — for each chunk, three screenshots are taken (start, middle, last frame). These images are passed to an LLM to get a general idea of what the video is about. The JSON output contains objects found, scene/environment, number of people, etc.</li>
+          <li><strong>REDACTED</strong> — You didn't think I was gonna tell you everything, right? Currently in the process of fine-tuning a model for various video editing use cases.</li>
+        </ol>
+
+        <h2>But I don't want you to have my data</h2>
+        <p>No worries. I'm committed to building software that's private, efficient, and treats users with respect. I always prioritize people first and follow strict standards. There's absolutely no hidden agenda.</p>
+        <p>No data retention by default, not as a hidden option.</p>
+        <p>I'm designing this in a way where I cannot read or access any information about the user or their files unless I have a confirmation, which will be asked for when or if a user reports a bug that requires me to look at their data.</p>
+
+        <h2>Final Thoughts</h2>
+        <p>Jia is built to make your files searchable by what they <em>contain</em>, not what they're <em>named</em>.</p>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saving you from your Git troubles - Amaan</title>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="../blog.html" class="active">Blog</a>
+        <a href="../project.html">Projects</a>
+      </nav>
+      <article>
+        <h1>Saving you from your Git troubles</h1>
+        <time>2026-02-25</time>
+
+        <h2>Well well well</h2>
+        <p>We've all been there. Learning how to program, learn about git &amp; github, save code for free. Everything's so much fun at the start. and then <strong>BOOM. Its all over.</strong></p>
+        <p>Let me save you this trouble of experiencing this downfall. So what do you actually need to know to save yourself from what I'm going to call in this blog, "<strong>Your Git Troubles</strong>"?</p>
+        <p><em>P.S. the things im going to be talking about are helpful but i wouldn't have felt that they were useful if it weren't for the tools i was using when going through these "phases". LazyGit is gonna be life saver for you lot, it does look intimidating at first but trust me <strong>it'll change your life.</strong></em></p>
+
+        <h2>Merge Conflicts</h2>
+        <p>Let's address the elephant in the room!</p>
+        <p>If you were expecting some magical way of resolving merge conflicts using agentic coding, vibe-coding or LLMs, let me break it to you, it's not as easy as it sounds.</p>
+        <p>I know this because me and friends were trying to solve the same problem, resolving merge conflicts with <a href="https://soarailabs.com" target="_blank">soarailabs</a>.</p>
+
+        <h2>Rebasing</h2>
+        <p>If you want the short version: rebasing is a cleaner, better way to merge. Skip to the next section if that's all you need. But if you want to understand <em>why</em>, keep reading.</p>
+        <h3>What is Rebasing?</h3>
+        <p>Imagine you're working on a feature branch called 'feat-login'. Meanwhile, 'main' has moved forward with commits from other teammates. Instead of merging 'main' into your branch (which creates a messy merge commit), rebasing essentially replays your commits on top of the current 'main'.</p>
+        <p>Merge puts your changes off to the side with a note. Rebase moves them straight on top. Same result, cleaner history.</p>
+        <h3>Why It's Important to Rebase</h3>
+        <p><strong>1. Cleaner Commit History</strong> — When you merge, you get those ugly merge commits cluttering your history. With rebasing, your commits stack linearly on top of 'main'.</p>
+        <p><strong>2. Fewer Merge Conflicts</strong> — When you regularly rebase onto 'main', you're constantly resolving conflicts in small doses. If you wait until the end and merge, you might have to untangle conflicts from weeks of divergent work all at once.</p>
+        <p><strong>3. Instant Feedback</strong> — If 'main' changed something your feature relies on, you'll know <em>immediately</em> when you rebase, not weeks later during a panic merge before release.</p>
+        <h3>Why I Prefer It Over Merging</h3>
+        <p>With merging, you get merge commits cluttering your history and conflicts piling up. With rebasing, you get a clean linear history and conflicts resolved early as you go.</p>
+
+        <h2>Cherry picking</h2>
+        <p>Let me tell you when i first realized how powerful git rebase was.</p>
+        <p>I was writing a feature for HelixDB — a graph database written in Rust from scratch. I wanted to combine vector search and keyword search using their RRF reranker. I was also writing another feature: passing multiple params in their 'Embed' function.</p>
+        <p>I wrote the Embed feature but realized it was something only I'd use, so no point making a PR. Accidentally, I checked out from the feat/embed branch to work on the RRF feature. I wrote the feature, tested it — everything worked great.</p>
+        <p>Then I realized my RRF feature relied on changes made during the Embed feature work, which would never be merged. My work was useless.</p>
+        <p>"Wait a minute, I read about some way to reapply only specific commits onto a branch..."</p>
+        <p>I discovered <strong>git cherry picking</strong>. I yoinked commits from the other feature branch, checked out a new branch from main, and slapped those commits onto the new clean feature branch. Made the PR. You can check out the <a href="https://github.com/AmaanBilwar/helix-db/commits/feat/new-hybrid-search/" target="_blank">link</a> to see it.</p>
+
+        <h2>Digestive Commits</h2>
+        <p>Small, focused commits are the difference between a git history you can read and one that makes you want to rip your hair out.</p>
+        <p>Think of commits like saving a document. You wouldn't write 5000 words, save once, then call it a day. You'd save after each paragraph, each thought. Same goes for code.</p>
+        <h3>Why It Matters</h3>
+        <p><strong>1. Reviewing is easier</strong> — Nobody wants to review a PR with 47 files changed. But 3-4 focused commits, each doing one thing? That's reviewable in 10 minutes.</p>
+        <p><strong>2. Reverting is surgical</strong> — Made a mistake? With small commits, you can undo just the bad part. With a massive commit, you're either reverting everything or digging through code to find what broke.</p>
+        <p><strong>3. You actually know what you did</strong> — When you're writing a commit message and can't summarize what changed in one sentence, that's a sign. The commit is doing too much. Split it up.</p>
+        <h3>The Rule of Thumb</h3>
+        <p>If your commit message has "and" in it, it should probably be two commits. "Added login form and validation" = two commits. "Fixed bug in auth middleware" = one commit, <strong>good</strong>.</p>
+
+        <h2>Sane &amp; Non AI PRs</h2>
+        <p>OSS can be incredible — open-sourcing the Linux kernel helped put Linux everywhere. Yet open source feels harder now: AI-assisted coding has led to repo standards being ignored.</p>
+        <p>Some projects stop accepting PRs. The ones hurt aren't automation farms, but learners trying to contribute.</p>
+        <p>Projects like <a href="https://github.com/ghostty-org/ghostty" target="_blank">ghostty</a> use systems like <a href="https://github.com/mitchellh/vouch" target="_blank">Vouch</a> so maintainers can approve candidates and revoke low-quality PRs.</p>
+        <p><a href="https://github.com/zed-industries/zed/" target="_blank">Zed</a> encourages contributors to open discussions, rank shared issues, and then implement them. It also has a <a href="https://zed.dev/community/zed-guild" target="_blank">Guild</a> to learn Rust and ship large, performant work.</p>
+        <p>Stop using AI to make PRs. Learn about the codebase with AI first, get comfortable navigating the project, then implement yourself. That's the least you can do to respect the project.</p>
+        <p>Your PR should be small and digestible. Maintainers shouldn't push it to the side because you remove 3k lines and added 7k lines.</p>
+        <p><strong>If I can tell that a PR is AI SLOP, trust me they can too.</strong></p>
+      </article>
+    </main>
+  </body>
+</html>
